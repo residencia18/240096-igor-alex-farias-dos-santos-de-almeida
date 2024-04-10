@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+form{
+  /* border: 1px solid red; */
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-self: center;
+  width: 70%;
+}
+
+.campos_form{
+  width: 30%;
+  padding: 10px;
+  /* border: 1px solid red; */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  text-align: center;
+  margin: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+#caixa_form{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+#caixa_botao{
+  padding: 10px;
+  /* border: 1px solid red; */
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: 67%;
+}
+
+button{
+  width: 60px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: chartreuse;
+}
+
+button:hover{
+  color: aliceblue;
+  background-color: darkgreen;
+  border: none;
+  cursor: pointer;
+}
+
+input{
+  height: 23px;
+  border-radius: 7px;
+  border: 2px;
+  border-style: ridge;
+  padding: 3px;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+label{
+  font-family: "Roboto", sans-serif;
+}

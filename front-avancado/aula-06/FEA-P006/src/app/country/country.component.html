@@ -1,0 +1,14 @@
+<h1>Country</h1>
+
+<div id="caixa_form">
+  <form>
+    <div *ngFor="let campo of camposDoForm" class="campos_form">
+      <label>{{ campo.rotulo }}</label>
+      <input type="{{ campo.tipo }}" [(ngModel)]="dados[campo.nome]" name="{{ campo.nome }}" />
+    </div>
+    <div id="caixa_botao">
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+</div>
+

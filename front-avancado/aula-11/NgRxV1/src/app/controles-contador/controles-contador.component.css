@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 200px; /* Adjust this value to create more or less space between the buttons */
+}
+
+button {
+    font-size: 1em;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:active {
+    background-color: #004085;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+  }

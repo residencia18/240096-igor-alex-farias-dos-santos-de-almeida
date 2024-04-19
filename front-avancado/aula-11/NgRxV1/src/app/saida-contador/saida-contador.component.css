@@ -1,0 +1,8 @@
+p {
+    font-family: 'Orbitron', sans-serif; /* Orbitron is a digital-style Google font */
+    font-size: 80px;
+    color: rgb(16, 54, 220);
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #0ff;
+    text-align: center;
+    margin-top: 50%;
+  }

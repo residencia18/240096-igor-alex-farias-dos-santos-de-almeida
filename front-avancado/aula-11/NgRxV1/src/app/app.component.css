@@ -1,0 +1,9 @@
+.container {
+    position: relative;
+  }
+  
+  app-saida-contador, app-controles-contador {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

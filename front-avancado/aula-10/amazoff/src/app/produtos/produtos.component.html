@@ -1,0 +1,38 @@
+<div class="cart-container m-5">
+  <h2>Produtos Disponíveis</h2>
+  <hr />
+  <div class="row">
+    <div *ngFor="let produto of produtos" class="col-lg-3 col-md-5 mb-4">
+      <div class="card h-100">
+        <img [src]="produto.imgURL" alt="{{ produto.name }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ produto.name }}</h5>
+          <p class="text-muted mb-2">Mais de X compras no último mês</p>
+          <h6 class="card-subtitle text-muted">
+            <span class="product-price">
+              <span class="currency">R$</span>
+              <span class="integer">{{
+                produto.price | number : "1.0" | slice : 0 : -3
+              }}</span>
+              <span class="decimal">{{
+                produto.price | number : ".2" | slice : -2
+              }}</span>
+
+            </span>
+          </h6>
+          <p class="text-muted mb-3">
+            <span class="product-parcel">
+              ou em até 12x de R$ {{ (produto.price / 12).toFixed(2) | number : '1.2-2' }}
+            </span>
+          </p>
+          <button (click)="adicionarAoCarrinho(produto)" class="btn btn-warning rounded-pill">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div #confirmacao class="alert alert-success mt-3 position-fixed top-50 start-50 translate-middle d-none">
+    Produto {{ produtoAdicionado }} adicionado ao carrinho!
+</div>

@@ -1,0 +1,52 @@
+<div class="cart-container m-5">
+  <h2>Carrinho de compras</h2>
+  <hr />
+
+  <!-- Row do produto -->
+  <div *ngFor="let item of carrinhoService.carrinhoSignal(); let i = index" class="cart-item row mb-3">
+    <!-- Checkmark -->
+    <div class="col-md-1 d-flex justify-content-center align-items-center">
+    <input type="checkbox" class="form-check-input" id="checkItem{{ i }}" [(ngModel)]="item.checked" />
+      <label class="form-check-label" for="checkItem{{ i }}"></label>
+    </div>
+
+    <!-- Imagem do produto -->
+    <div class="col-md-2">
+      <img [src]="item.imgURL" alt="{{ item.name }}" class="img-fluid" />
+    </div>
+
+    <!-- Informações do produto -->
+    <div class="col-md-7 d-flex flex-column justify-content-between">
+      <h4>{{ item.name }}</h4>
+      <p>Em estoque</p>
+      <div class="d-flex align-items-center">
+        <select class="form-select w-auto" aria-label="Quantidade" [(ngModel)]="item.quantity" (change)="adicionarItemQtyCarrinho(item)">
+            <option *ngFor="let q of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" [ngValue]="q">{{ q }}</option>
+        </select>
+
+        <button (click)="removerItem(i)" class="btn btn-sm btn-danger mx-2">Excluir</button>
+      </div>
+    </div>
+
+    <!-- Preço -->
+    <div class="col-md-2 text-right">
+      <p class="fw-bold">R$ {{ item.price.toFixed(2) }}</p>
+      <p class="text-muted">à vista no Pix e boleto<br />ou em até 12x de R$ {{ (item.price / 12).toFixed(2) }} sem juros</p>
+    </div>
+
+    
+  <hr class="my-4" />
+  </div>
+  <!-- Fim do row do produto -->
+
+
+  <!-- Subtotal -->
+  <div class="cart-subtotal row justify-content-end">
+    <div class="col-md-8 text-end">
+      <p>Subtotal ({{ carrinhoService.carrinhoSignal().length }} Produtos):</p>
+    </div>
+    <div class="col-md-4 text-right">
+      <p class="fw-bold">R$ {{ carrinhoService.subtotal().toFixed(2) }}</p>
+    </div>
+  </div>
+</div>

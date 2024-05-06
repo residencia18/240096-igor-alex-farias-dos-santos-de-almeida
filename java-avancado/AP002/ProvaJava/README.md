@@ -1,23 +1,19 @@
-Projeto ProvaJava
-Este repositório contém códigos fonte relacionados ao projeto ProvaJava.
+Prova Java
 
-Descrição
-O projeto ProvaJava é uma aplicação Java desenvolvida como parte de um desafio ou prova relacionada a conceitos avançados da linguagem Java e tecnologias relacionadas.
+Este repositório contém uma aplicação Java desenvolvida como parte de uma prova de habilidades em Java avançado. A aplicação inclui recursos para envio de e-mails, autenticação de usuários, registro de usuários, solicitação de redefinição de senha, entre outros recursos.
 
 Estrutura do Projeto
-O projeto está estruturado da seguinte forma:
 
-src/main/java: Contém os arquivos fonte do projeto.
-src/test/java: Contém os arquivos de teste do projeto.
-src/main/resources: Contém os recursos da aplicação, como arquivos de configuração.
-src/test/resources: Contém os recursos para os testes, como arquivos de dados de teste.
-Dependências
-Este projeto pode depender de várias bibliotecas e frameworks, incluindo:
+src/main/java/com.provaJava.ProvaJava: Este diretório contém os arquivos Java do projeto.
+src/main/resources: Contém os arquivos de recursos da aplicação.
+src/test: Contém os arquivos de teste.
 
-Spring Boot: Framework para desenvolvimento de aplicativos Java.
-Hibernate: Framework ORM para mapeamento objeto-relacional.
-Spring Security: Framework para segurança de aplicativos Spring.
-JUnit: Framework para testes unitários em Java.
-Maven: Gerenciador de dependências e construção de projetos Java.
+Pré-requisitos
 
-A aplicação estará disponível em http://localhost:8080.
+Java JDK 11 ou superior
+Maven 3.6.3 ou superior
+PostgreSQL
+
+Configuração do Banco de Dados
+Crie um banco de dados PostgreSQL com o nome prova_java.
+Configure as credenciais de acesso ao banco de dados no arquivo application.properties localizado em src/main/resources.

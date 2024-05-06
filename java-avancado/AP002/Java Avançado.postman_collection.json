@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "27f9df62-a1d4-41bd-92d1-d6f6ad5f5ea0",
+		"name": "Prova Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11286834",
+		"_collection_link": "https://solar-astronaut-17052.postman.co/workspace/Residencia~90aa3b58-7e19-44d6-8e48-352a16805e6b/collection/11286834-27f9df62-a1d4-41bd-92d1-d6f6ad5f5ea0?action=share&source=collection_link&creator=11286834"
+	},
+	"item": [
+		{
+			"name": "Prova",
+			"item": [
+				{
+					"name": "sending-email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJqYXZhQXZhbmNhZG8tYXBpIiwic3ViIjoibWlrYWVsbGUxMjNAZ21haWwuY29tIiwiZXhwIjoxNzE0ODY0ODU4fQ.MnWWQMjCs9bsE8LYNx5BiF-TpotoMrvK47y0pKdj-1U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ReferenciaDono\": \"Igor Alex\",\r\n    \"emailFrom\":\"igoralexcpp@gmail.com\",\r\n    \"emailTo\":\"igoralexcpp@outlook.com\",\r\n    \"subject\": \"Segundo envio\",\r\n    \"text\":\"Bahia x Vitória maior classico do mundo\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sending-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sending-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"leagueoflegends@gmail.com\",\r\n    \"name\": \"Igor Alex\",\r\n    \"password\":\"159753\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/auth/login prova",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"leagueoflegends@gmail.com\",\r\n    \"name\": \"Igor\",\r\n    \"password\":\"159753\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/auth/solicitaReset",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJQcm92YUphdmEtYXBpIiwic3ViIjoicnViaWExMkBnbWFpbC5jb20iLCJleHAiOjE3MTQ5NDk0NDJ9.im4u_oENuwqoqu_LJCTFaZq0e_4-M_XfYK41IVWqFgc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"leagueoflegends@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/solicitaReset",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"solicitaReset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/redefinir-senha",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJQcm92YUphdmEtYXBpIiwic3ViIjoicnViaWExMkBnbWFpbC5jb20iLCJleHAiOjE3MTQ5NDk0NjB9.2AMN7aaYlCg-EAJ20-6RHBx19P2m0scSRCdgUhfYyK0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"email\": \"leagueoflegends@gmail.com\",\r\n    \"password\":\"123\",\r\n    \"newPassword\":\"6447\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/redefinir-senha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"redefinir-senha"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
